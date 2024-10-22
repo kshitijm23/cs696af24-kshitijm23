@@ -1,0 +1,53 @@
+.dashboard {
+  display: flex;
+}
+
+.sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+.sidebar.closed {
+  margin-left: -250px;
+}
+
+.sidebar-sticky {
+  position: sticky;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.sidebar .nav-link {
+  color: #fff;
+  padding: 0.75rem 1rem;
+}
+
+.sidebar .nav-link:hover {
+  color: #007bff;
+}
+
+.sidebar-heading {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  padding: 1rem;
+  color: #fff;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    margin-left: -250px;
+  }
+  .sidebar.open {
+    margin-left: 0;
+  }
+}
